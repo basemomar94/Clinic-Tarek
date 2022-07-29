@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/doctor_nav_graph.xml"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/home"
+        android:name="com.AyoubTarik.PatientArzt.doctor_section.home.DoctorHomeFragment"
+        android:label="Home" >
+        <action
+            android:id="@+id/action_home2_to_patientsInfo"
+            app:destination="@id/patientsInfo" />
+        <action
+            android:id="@+id/action_home2_to_schedule_Container"
+            app:destination="@id/schedule" />
+    </fragment>
+    <fragment
+        android:id="@+id/patientsInfo"
+        android:name="com.AyoubTarik.PatientArzt.doctor_section.patients.info.PatientsInfo"
+        android:label="PatientsInfo">
+        <action
+            android:id="@+id/action_patientsInfo_to_prescription2"
+            app:destination="@id/prescription2" />
+        <action
+            android:id="@+id/action_patientsInfo_to_booking2"
+            app:destination="@id/booking2" />
+    </fragment>
+    <fragment
+        android:id="@+id/schedule"
+        android:name="com.bassem.clinicadminapp.schedule.Schedule_Container"
+        android:label="Schedule_Container" >
+        <action
+            android:id="@+id/action_schedule_Container_to_expand_visit"
+            app:destination="@id/expand_visit" />
+    </fragment>
+    <fragment
+        android:id="@+id/prescription2"
+        android:name="com.bassem.clinicadminapp.patients.prescription.Prescription"
+        android:label="Prescription" />
+    <fragment
+        android:id="@+id/booking2"
+        android:name="com.AyoubTarik.PatientArzt.doctor_section.patients.info.BookingDoctor"
+        android:label="Booking" />
+    <fragment
+        android:id="@+id/expand_visit"
+        android:name="com.AyoubTarik.PatientArzt.doctor_section.schedule.Expand_visit"
+        android:label="Expand_visit" />
+    <fragment
+        android:id="@+id/patients"
+        android:name="com.AyoubTarik.PatientArzt.doctor_section.patients.listofpatients.PatientsList"
+        android:label="PatientsList" >
+        <action
+            android:id="@+id/action_patientsList_to_patientsInfo"
+            app:destination="@id/patientsInfo" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.AyoubTarik.PatientArzt.doctor_section.login.LoginDoctorFragment"
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_home2"
+            app:destination="@id/home"
+            app:popUpTo="@id/doctor_nav_graph.xml"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/info"
+        android:name="com.AyoubTarik.PatientArzt.doctor_section.info.InfoFragment"
+        android:label="InfoFragment" />
+</navigation>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_host_patient.xml"
+    app:startDestination="@id/loginPatientFragment">
+
+    <fragment
+        android:id="@+id/loginPatientFragment"
+        android:name="com.AyoubTarik.PatientArzt.patient_section.log.LoginPatientFragment"
+        android:label="LoginPatientFragment" >
+        <action
+            android:id="@+id/action_loginPatientFragment_to_homePatientFragment"
+            app:destination="@id/home" />
+        <action
+            android:id="@+id/action_loginPatientFragment_to_signupFragment"
+            app:destination="@id/signupFragment" />
+        <action
+            android:id="@+id/action_loginPatientFragment_to_home"
+            app:destination="@id/home"
+            app:popUpTo="@id/nav_host_patient.xml"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/booking"
+        android:name="com.AyoubTarik.PatientArzt.patient_section.ui.booking.BookingDashboard"
+        android:label="BookingPatient">
+        <action
+            android:id="@+id/action_bookingPatient_to_visitsExpand"
+            app:destination="@id/visitsExpand" />
+        <action
+            android:id="@+id/action_booking_to_bookingPatient"
+            app:destination="@id/bookingPatient" />
+    </fragment>
+    <fragment
+        android:id="@+id/visitsExpand"
+        android:name="com.AyoubTarik.PatientArzt.patient_section.ui.booking.VisitsExpand"
+        android:label="VisitsExpand" />
+    <fragment
+        android:id="@+id/home"
+        android:name="com.bassem.clinic_userapp.ui.home.HomePatientFragment"
+        android:label="HomePatientFragment" >
+        <action
+            android:id="@+id/action_homePatientFragment_to_bookingPatient"
+            app:destination="@id/booking" />
+    </fragment>
+    <fragment
+        android:id="@+id/signupFragment"
+        android:name="com.AyoubTarik.PatientArzt.patient_section.log.SignupFragment"
+        android:label="SignupFragment" >
+        <action
+            android:id="@+id/action_signupFragment_to_homePatientFragment"
+            app:destination="@id/home" />
+    </fragment>
+    <fragment
+        android:id="@+id/profile"
+        android:name="com.bassem.clinic_userapp.ui.profile.Profile"
+        android:label="Profile" />
+    <fragment
+        android:id="@+id/bookingPatient"
+        android:name="com.AyoubTarik.PatientArzt.patient_section.ui.booking.BookingPatient"
+        android:label="BookingPatient" >
+        <action
+            android:id="@+id/action_bookingPatient_to_home"
+            app:destination="@id/home" />
+    </fragment>
+    <fragment
+        android:id="@+id/website"
+        android:name="com.AyoubTarik.PatientArzt.patient_section.ui.webview.WebFragment"
+        android:label="WebFragment" /><action android:id="@+id/action_global_home" app:destination="@id/home"/>
+</navigation>

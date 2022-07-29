@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Klinik APP</string>
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">"AIzaSyB9YDaafyb4En07OB5JRWL97Imj5lJNwdU"</string>
+    <string name="auswaehlen">Kontotyp auswählen</string>
+    <string name="doctor">Arzt</string>
+    <string name="termine">Termine</string>
+    <string name="home">Home</string>
+    <string name="patienten">Patienten</string>
+</resources>
